@@ -100,6 +100,8 @@ echo "Installing required packages..."
 fetch ${FREEBSD_PACKAGE_LIST_URL}
 tar vfx packagesite.pkg
 
+pkg install -y pcre
+
 AddPkg () {
  	pkgname=$1
 	pkg unlock -yq $pkgname
